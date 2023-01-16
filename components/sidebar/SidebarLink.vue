@@ -1,15 +1,15 @@
-<script setup>
-defineProps({
-  text: String,
-  to: String,
-  icon: String,
-})
+<script setup lang="ts">
+defineProps<{
+  text: string
+  to: string
+  icon: string
+}>()
 </script>
 
 <template>
   <NuxtLink :to="to" class="flex gap-5 md:gap-10 items-center group">
     <span
-      class="font-ruluko group-hover:font-semibold group-hover:text-gray-700"
+      class="group-hover:font-semibold group-hover:text-gray-700"
     >
       {{ text }}
     </span>

@@ -10,5 +10,8 @@ export default defineNuxtConfig({
       ],
     },
   },
+  typescript: {
+    shim: false,
+  },
   modules: ['@nuxtjs/tailwindcss', 'nuxt-icon'],
 })
