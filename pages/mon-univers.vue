@@ -18,6 +18,7 @@ useHead({
       <AppPhoto
         image="/photos/photo-0005-640.jpg"
         direction="left"
+        alt="Photographe se prenant en photo"
         class="flex-1"
       />
     </div>
@@ -52,7 +53,7 @@ useHead({
         (max-width: 80em) 1024px, 
         1280px
       "
-      alt=""
+      alt="Photographe se prenant en photo"
       class="max-w-4xl w-full mx-auto h-48 sm:h-72 md:h-96 object-cover border-4 border-white rounded"
     />
     <p class="flex-1 text-lg xl:text-xl tracking-wider !leading-loose">
@@ -78,7 +79,7 @@ useHead({
         (max-width: 80em) 1024px, 
         1280px
       "
-      alt=""
+      alt="Photographe se prenant en photo"
       class="max-w-4xl w-full mx-auto h-48 sm:h-72 md:h-96 object-cover border-4 border-white rounded"
     />
     <div class="flex flex-col md:flex-row items-center gap-10">
@@ -99,6 +100,7 @@ useHead({
       <AppPhoto
         image="/photos/photo-0005-640.jpg"
         direction="right"
+        alt="Photographe se prenant en photo"
         class="flex-1 order-first md:-order-none"
       />
     </div>
@@ -107,6 +109,7 @@ useHead({
       <AppPhoto
         image="/photos/photo-0005-640.jpg"
         direction="left"
+        alt="Photographe se prenant en photo"
         class="flex-1 order-first md:-order-none"
       />
       <p class="flex-1 text-lg xl:text-xl tracking-wider !leading-loose">
