@@ -1,6 +1,9 @@
 <script setup lang="ts">
 import { Form, Field, ErrorMessage } from 'vee-validate'
 import { object, string } from 'yup'
+import emailjs from '@emailjs/browser'
+
+const runtimeConfig = useRuntimeConfig()
 
 useHead({
   title: 'Contact - Severi Rémy | Photography',
@@ -13,6 +16,9 @@ useHead({
   ],
 })
 
+const success = ref(false)
+const error = ref(false)
+
 const schema = object({
   firstname: string().required('Ce champ est obligatoire'),
   lastname: string().required('Ce champ est obligatoire'),
@@ -22,8 +28,21 @@ const schema = object({
   message: string().required('Ce champ est obligatoire'),
 })
 
-function onSubmit(values, { resetForm }) {
-  resetForm()
+async function onSubmit(values, { resetForm }) {
+  try {
+    success.value = false
+    error.value = false
+    await emailjs.send(
+      runtimeConfig.public.emailJsServiceId,
+      runtimeConfig.public.emailJsTemplateId,
+      values,
+      runtimeConfig.public.emailJsPublicKey
+    )
+    success.value = true
+    resetForm()
+  } catch (err) {
+    error.value = true
+  }
 }
 </script>
 
@@ -71,6 +90,19 @@ function onSubmit(values, { resetForm }) {
         </span>
         <span>Ou via le formulaire ci-dessous</span>
       </h4>
+
+      <div
+        v-if="success"
+        class="bg-green-200 border border-green-400 text-green-700 rounded p-5 text-lg mb-5"
+      >
+        Le formulaire a bien été envoyé.
+      </div>
+      <div
+        v-else-if="error"
+        class="bg-red-200 border border-red-400 text-red-700 rounded p-5 text-lg mb-5"
+      >
+        Une erreur est survenue lors de l'envoi du formulaire.
+      </div>
 
       <Form
         @submit="onSubmit"
@@ -158,10 +190,15 @@ function onSubmit(values, { resetForm }) {
           type="submit"
           :disabled="isSubmitting"
         >
-          <span>
-            <Icon name="fa6-solid:paper-plane" />
+          <span v-if="isSubmitting">
+            <Icon name="gg:spinner" class="animate-spin" size="24px" />
           </span>
-          <span>Envoyer</span>
+          <template v-else>
+            <span>
+              <Icon name="fa6-solid:paper-plane" />
+            </span>
+            <span>Envoyer</span>
+          </template>
         </button>
       </Form>
     </div>
