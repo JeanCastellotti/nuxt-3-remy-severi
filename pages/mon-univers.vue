@@ -38,24 +38,7 @@ useHead({
         photos de groupes !
       </p>
     </div>
-    <img
-      srcset="
-        /photos/photo-0005-300.jpg   300w,
-        /photos/photo-0005-640.jpg   640w,
-        /photos/photo-0005-768.jpg   768w,
-        /photos/photo-0005-1024.jpg 1024w,
-        /photos/photo-0005-1280.jpg 1280w
-      "
-      sizes="
-        (max-width: 40em) 300px, 
-        (max-width: 48em) 640px, 
-        (max-width: 64em) 768px, 
-        (max-width: 80em) 1024px, 
-        1280px
-      "
-      alt="Photographe se prenant en photo"
-      class="max-w-4xl w-full mx-auto h-48 sm:h-72 md:h-96 object-cover border-4 border-white rounded"
-    />
+    <AppImageFull src="photo-0005.jpg" alt="Photographe se prenant en photo" />
     <p class="flex-1 text-lg xl:text-xl tracking-wider !leading-loose">
       Mon amour de la photo est né de mon expérience professionnelle à la FNAC
       grâce à mes collègues du rayon photos, les sorties découvertes mon permis
@@ -64,24 +47,7 @@ useHead({
       propice au développement de mes compétences avec un vrai regard plus en
       relief sur ce qui nous entoure.
     </p>
-    <img
-      srcset="
-        /photos/photo-0005-300.jpg   300w,
-        /photos/photo-0005-640.jpg   640w,
-        /photos/photo-0005-768.jpg   768w,
-        /photos/photo-0005-1024.jpg 1024w,
-        /photos/photo-0005-1280.jpg 1280w
-      "
-      sizes="
-        (max-width: 40em) 300px, 
-        (max-width: 48em) 640px, 
-        (max-width: 64em) 768px, 
-        (max-width: 80em) 1024px, 
-        1280px
-      "
-      alt="Photographe se prenant en photo"
-      class="max-w-4xl w-full mx-auto h-48 sm:h-72 md:h-96 object-cover border-4 border-white rounded"
-    />
+    <AppImageFull src="photo-0005.jpg" alt="Photographe se prenant en photo" />
     <div class="flex flex-col md:flex-row items-center gap-10">
       <div
         class="flex-1 text-lg xl:text-xl tracking-wider !leading-loose space-y-5"
