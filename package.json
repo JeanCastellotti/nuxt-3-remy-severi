@@ -13,6 +13,7 @@
     "nuxt-icon": "^0.2.5"
   },
   "dependencies": {
+    "@emailjs/browser": "^3.10.0",
     "vee-validate": "^4.7.3",
     "yup": "^0.32.11"
   }

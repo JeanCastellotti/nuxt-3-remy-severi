@@ -13,6 +13,13 @@ export default defineNuxtConfig({
       ],
     },
   },
+  runtimeConfig: {
+    public: {
+      emailJsServiceId: process.env.EMAIL_JS_SERVICE_ID,
+      emailJsTemplateId: process.env.EMAIL_JS_TEMPLATE_ID,
+      emailJsPublicKey: process.env.EMAIL_JS_PUBLIC_KEY,
+    },
+  },
   typescript: {
     shim: false,
   },
