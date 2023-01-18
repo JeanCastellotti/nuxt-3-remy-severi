@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script setup>
 useHead({
   title: 'Accueil - Severi Rémy | Photography',
   meta: [
@@ -13,83 +13,83 @@ useHead({
 
 <template>
   <div
-    class="grid grid-cols-4 grid-rows-[repeat(7,_8rem)] sm:grid-rows-[repeat(5,_8rem)] lg:grid-rows-5 gap-5 h-full"
+    class="grid h-full grid-cols-4 grid-rows-[repeat(7,_8rem)] gap-5 sm:grid-rows-[repeat(5,_8rem)] lg:grid-rows-5"
   >
-    <div class="row-span-2 col-span-2 relative">
+    <div class="relative col-span-2 row-span-2">
       <img
         src="/photos/photo-0001-640.jpg"
         alt="Un chien dans un jardin"
-        class="absolute rounded object-cover w-full h-full"
+        class="absolute h-full w-full rounded object-cover"
       />
     </div>
-    <div class="rounded col-span-2 sm:col-auto relative">
+    <div class="relative col-span-2 rounded sm:col-auto">
       <img
         src="/photos/photo-0028-300.jpg"
         alt="Un couple heureux"
-        class="absolute rounded object-cover w-full h-full"
+        class="absolute h-full w-full rounded object-cover"
       />
     </div>
-    <div class="rounded row-span-2 col-span-2 sm:col-auto relative">
+    <div class="relative col-span-2 row-span-2 rounded sm:col-auto">
       <img
         src="/photos/photo-0014-300.jpg"
         alt="Une femme mariée"
-        class="absolute rounded object-cover w-full h-full"
+        class="absolute h-full w-full rounded object-cover"
       />
     </div>
-    <div class="rounded col-span-2 sm:col-auto relative">
+    <div class="relative col-span-2 rounded sm:col-auto">
       <img
         src="/photos/photo-0034-300.jpg"
         alt="Une fille regardant la caméra"
-        class="absolute rounded object-cover w-full h-full"
+        class="absolute h-full w-full rounded object-cover"
       />
     </div>
-    <div class="rounded sm:row-span-2 col-span-2 sm:col-auto relative">
+    <div class="relative col-span-2 rounded sm:col-auto sm:row-span-2">
       <img
         src="/photos/photo-0024-300.jpg"
         alt="Un garçon dans un jardin"
-        class="absolute rounded object-cover w-full h-full"
+        class="absolute h-full w-full rounded object-cover"
       />
     </div>
-    <div class="rounded col-span-2 sm:col-auto relative">
+    <div class="relative col-span-2 rounded sm:col-auto">
       <img
         src="/photos/photo-0029-300.jpg"
         alt="Une fillette heureuse"
-        class="absolute rounded object-cover w-full h-full"
+        class="absolute h-full w-full rounded object-cover"
       />
     </div>
-    <div class="rounded sm:row-span-2 col-span-4 sm:col-span-2 relative">
+    <div class="relative col-span-4 rounded sm:col-span-2 sm:row-span-2">
       <img
         src="/photos/photo-0031-640.jpg"
         alt="Un garçon souriant"
-        class="absolute rounded object-cover w-full h-full"
+        class="absolute h-full w-full rounded object-cover"
       />
     </div>
-    <div class="rounded sm:row-span-2 col-span-2 sm:col-auto relative">
+    <div class="relative col-span-2 rounded sm:col-auto sm:row-span-2">
       <img
         src="/photos/photo-0006-300.jpg"
         alt="Un homme marié heureux"
-        class="absolute rounded object-cover w-full h-full"
+        class="absolute h-full w-full rounded object-cover"
       />
     </div>
-    <div class="rounded col-span-2 sm:col-auto relative">
+    <div class="relative col-span-2 rounded sm:col-auto">
       <img
         src="/photos/photo-0021-300.jpg"
         alt="Une femme souriante"
-        class="absolute rounded object-cover w-full h-full"
+        class="absolute h-full w-full rounded object-cover"
       />
     </div>
-    <div class="rounded col-span-2 sm:col-auto relative">
+    <div class="relative col-span-2 rounded sm:col-auto">
       <img
         src="/photos/photo-0018-300.jpg"
         alt="Une femme mariée de dos"
-        class="absolute rounded object-cover w-full h-full"
+        class="absolute h-full w-full rounded object-cover"
       />
     </div>
-    <div class="rounded col-span-2 sm:col-auto relative">
+    <div class="relative col-span-2 rounded sm:col-auto">
       <img
         src="/photos/photo-0067-300.jpg"
         alt="Un couple de mariés"
-        class="absolute rounded object-cover w-full h-full"
+        class="absolute h-full w-full rounded object-cover"
       />
     </div>
   </div>

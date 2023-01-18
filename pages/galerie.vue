@@ -1,13 +1,5 @@
-<script setup lang="ts">
-import data from '@/data/photos.json'
-
-interface Photo {
-  id: number
-  src: string
-  alt?: string
-  categories: string[]
-  show: boolean
-}
+<script setup>
+import data from '@/data/photos'
 
 useHead({
   title: 'Galerie - Severi Rémy | Photography',
@@ -24,19 +16,19 @@ const photos = reactive(data)
 
 const selectedCategory = ref('')
 
-function openModal(photo: Photo) {
+function openModal(photo) {
   photo.show = true
   document.body.classList.add('overflow-hidden')
 }
 
-function closeModal(photo: Photo) {
+function closeModal(photo) {
   photo.show = false
   document.body.classList.remove('overflow-hidden')
 }
 
 const filteredPhotos = computed(() => {
   if (selectedCategory.value) {
-    return photos.filter((photo: Photo) => {
+    return photos.filter((photo) => {
       return photo.categories.includes(selectedCategory.value)
     })
   }

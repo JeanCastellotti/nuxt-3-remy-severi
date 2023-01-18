@@ -1,9 +1,15 @@
-<script setup lang="ts">
-const props = defineProps<{
-  image: string
-  alt?: string
-  direction: 'left' | 'right'
-}>()
+<script setup>
+const props = defineProps({
+  image: String,
+  alt: String,
+  direction: {
+    type: String,
+    default: 'left',
+    validator(value) {
+      return ['left', 'right'].includes(value)
+    },
+  },
+})
 
 const imageDirection = computed(() => {
   if (props.direction === 'left') return '-rotate-2 group-hover:-rotate-3'

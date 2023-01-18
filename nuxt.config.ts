@@ -20,8 +20,5 @@ export default defineNuxtConfig({
       emailJsPublicKey: process.env.EMAIL_JS_PUBLIC_KEY,
     },
   },
-  typescript: {
-    shim: false,
-  },
   modules: ['@nuxtjs/tailwindcss', 'nuxt-icon'],
 })

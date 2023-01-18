@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script setup>
 const show = ref(false)
 
 const emit = defineEmits(['close'])

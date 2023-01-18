@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script setup>
 useHead({
   title: 'Mon univers - Severi Rémy | Photography',
   meta: [

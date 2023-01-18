@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script setup>
 import { Form, Field, ErrorMessage } from 'vee-validate'
 import { object, string } from 'yup'
 import emailjs from '@emailjs/browser'

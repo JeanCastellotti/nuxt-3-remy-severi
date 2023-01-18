@@ -1,8 +1,11 @@
-<script setup lang="ts">
-const props = defineProps<{
-  src: string
-  alt?: string
-}>()
+<script setup>
+const props = defineProps({
+  src: {
+    type: String,
+    required: true,
+  },
+  alt: String,
+})
 
 const srcset = computed(() => {
   const [filename, extension] = props.src.split('.')
