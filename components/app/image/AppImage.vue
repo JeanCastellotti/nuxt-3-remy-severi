@@ -1,5 +1,11 @@
 <script setup>
-const props = defineProps()
+const props = defineProps({
+  src: {
+    type: String,
+    required: true,
+  },
+  alt: String,
+})
 
 const srcset = computed(() => {
   return `
