@@ -9,10 +9,10 @@ const props = defineProps({
 
 const srcset = computed(() => {
   return `
-    /photos/${props.src}-640.jpg   640w,
-    /photos/${props.src}-768.jpg   768w,
-    /photos/${props.src}-1024.jpg 1024w,
-    /photos/${props.src}-1280.jpg 1280w
+    ~/photos/${props.src}-640.jpg   640w,
+    ~/photos/${props.src}-768.jpg   768w,
+    ~/photos/${props.src}-1024.jpg 1024w,
+    ~/photos/${props.src}-1280.jpg 1280w
   `
 })
 </script>

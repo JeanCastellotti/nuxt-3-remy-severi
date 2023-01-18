@@ -1,0 +1,52 @@
+[
+  {
+    "title": "Mon univers",
+    "icon": "fa6-solid:camera-retro",
+    "href": "/mon-univers"
+  },
+  {
+    "title": "Mariage",
+    "icon": "fa6-solid:ring",
+    "href": "/mariage"
+  },
+  {
+    "title": "Portrait",
+    "icon": "fa6-solid:image-portrait",
+    "href": "/portrait"
+  },
+  {
+    "title": "Maternité",
+    "icon": "fa6-solid:baby",
+    "href": "/mon-univers"
+  },
+  {
+    "title": "Famille",
+    "icon": "fa6-solid:people-roof",
+    "href": "/famille"
+  },
+  {
+    "title": "Animaux",
+    "icon": "fa6-solid:paw",
+    "href": "/animaux"
+  },
+  {
+    "title": "Corporate",
+    "icon": "fa6-solid:briefcase",
+    "href": "/corporate"
+  },
+  {
+    "title": "Galerie",
+    "icon": "fa6-solid:images",
+    "href": "/galerie"
+  },
+  {
+    "title": "Tarifs",
+    "icon": "fa6-solid:tags",
+    "href": "/tarifs"
+  },
+  {
+    "title": "Contact",
+    "icon": "fa6-solid:phone-flip",
+    "href": "/contact"
+  }
+]
