@@ -57,7 +57,7 @@ const filteredPhotos = computed(() => {
         class="relative h-40 transition hover:scale-105 cursor-pointer"
       >
         <img
-          :src="`photos/${photo.src}-300.jpg`"
+          :src="`/photos/${photo.src}-300.jpg`"
           :alt="photo.alt"
           class="rounded object-cover w-full h-full"
           loading="lazy"
