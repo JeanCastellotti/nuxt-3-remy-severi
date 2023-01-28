@@ -12,17 +12,20 @@ useHead({
   ],
 })
 
+const showModal = ref(false)
 const photos = reactive(data)
-
+const photoModal = ref(null)
 const selectedCategory = ref('')
 
 function openModal(photo) {
-  photo.show = true
+  showModal.value = true
+  photoModal.value = photo
   document.body.classList.add('overflow-hidden')
 }
 
-function closeModal(photo) {
-  photo.show = false
+function closeModal() {
+  showModal.value = false
+  photoModal.value = null
   document.body.classList.remove('overflow-hidden')
 }
 
@@ -63,17 +66,18 @@ const filteredPhotos = computed(() => {
           loading="lazy"
           @click="openModal(photo)"
         />
-        <AppModal v-if="photo.show" @close="closeModal(photo)">
-          <AppImage
-            :src="photo.src"
-            :alt="photo.alt"
-            class="rounded block h-full w-full object-cover"
-          />
-        </AppModal>
       </div>
       <div v-if="!filteredPhotos.length">
         Pas de photos pour cette catégorie
       </div>
     </div>
+
+    <AppModal v-if="showModal" @close="closeModal">
+      <AppImage
+        :src="photoModal.src"
+        :alt="photoModal.alt"
+        class="rounded block h-full w-full object-cover"
+      />
+    </AppModal>
   </div>
 </template>
